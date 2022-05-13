@@ -3,13 +3,16 @@ const sliderLine = document.querySelector('.slider-track');
 const dots = document.querySelectorAll('.dot-container');
 const dot = document.querySelectorAll('.dot');
 let slideCount = 1;
-const slideStep = 256;
+const mediaQuery = window.matchMedia('(max-width: 376px)');
+let slideStep = 320;
+if (mediaQuery.matches) {
+    slideStep = 285;
+}
 
 
 
 dots.forEach(element => element.addEventListener('click', () => {
     let idNumber = Number(element.id.slice(4));
-    console.log(idNumber);
     if (idNumber === slideCount) {
         return;
     }

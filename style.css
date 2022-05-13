@@ -14,7 +14,7 @@ body {
 
 header {
     height: 50px;
-    background-color: aqua;
+    background-color: #93DE31;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -40,29 +40,27 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 720px;
+    width: 520px;
     height: 420px;
     border-radius: 10px;
     margin: 50px auto;
-    background: gray;
+    background: #FF6D38;
 }
 
 .slider-container {
-    /* position: absolute; */
     overflow: hidden;
-    background-color: pink;
-    width: 256px;
+    background-color: #FF6D38;
+    width: 320px;
     border-radius: 10px;
-    box-shadow: 3px -3px rgba(0, 0, 0, 0.3);
 }
 
 .slider-track {
-    width: 1024px;
+    width: 1280px;
     position: relative;
     left: 0;
     display: flex;
     flex-direction: row;
-    background-color: gray;
+    background-color: #FF6D38;
     transition: .3s;
 }
 
@@ -70,32 +68,34 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 300px;
+    height: 350px;
 }
 
 .slider-item img {
-    width: 256px;
+    width: 320px;
     /* height: 100%; */
     z-index: 9999;
+    border-radius: 10px;
 }
 
-.slider-item p {
+
+/* .slider-item p {
     padding-top: 20px;
-}
+} */
 
 .buttons {
     text-align: center;
 }
 
 .control-dots {
-    bottom: 50px;
+    bottom: 25px;
     right: 30px;
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 5px;
-    background: gray;
+    background: #FF6D38;
 }
 
 .dot-container {
@@ -116,11 +116,80 @@ a {
 }
 
 .active {
-    background-color: orange;
+    background-color: rgb(143, 49, 222);
 }
 
 .hover-active {
-    background-color: red;
+    background-color: white
+}
+
+footer {
+    background-color: #93DE31;
+    color: black;
+}
+
+footer a {
+    color: black
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        max-width: 475px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .wrapper {
+        max-width: 340px;
+    }
+    .slider-item {
+        height: 380px;
+    }
+    .control-dots {
+        left: 0;
+        right: 0;
+        margin: 0 auto 15px;
+    }
+    .dot-container {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .wrapper {
+        max-width: 315px;
+        height: 405px;
+    }
+    .slider-track {
+        width: 1140px;
+    }
+    .slider-item {
+        height: 355px;
+    }
+    .slider-item p {
+        padding-bottom: 10px;
+    }
+    .slider-item img {
+        width: 285px;
+    }
+    .slider-container {
+        width: 285px;
+    }
+    .control-dots {
+        margin: 0 auto 30px;
+    }
 }
 
 
